@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: bday-nextjs-app
+    runtime: node
+    plan: free
+    buildCommand: "npm install && npm run build"
+    startCommand: "npm start"
+    envVars:
+      NODE_ENV: production
