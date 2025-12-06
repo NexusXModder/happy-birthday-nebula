@@ -27,15 +27,12 @@ export default function Home() {
 
   return (
     <>
-      {/* Music Player */}
       <MusicPlayer />
 
       <main className="relative flex items-center justify-center min-h-screen overflow-hidden bg-black text-white">
 
-        {/* Background Rose Petals */}
         <RosePetals />
 
-        {/* Screens */}
         <AnimatePresence mode="wait">
           {step === 0 && <LoaderScreen onFinish={next} />}
           {step === 1 && <IntroScreen onNext={next} />}
@@ -51,7 +48,6 @@ export default function Home() {
           )}
         </AnimatePresence>
 
-        {/* Watermark */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.3, transition: { delay: 1 } }}
@@ -60,7 +56,6 @@ export default function Home() {
           @starry_araf_
         </motion.div>
 
-        {/* Proposal Modal */}
         <ProposalModal
           open={proposalOpen}
           onClose={() => {
@@ -69,7 +64,6 @@ export default function Home() {
           }}
         />
 
-        {/* Final Celebration */}
         <FinalCelebration show={celebrate} />
       </main>
     </>
