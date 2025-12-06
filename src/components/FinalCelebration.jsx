@@ -8,6 +8,7 @@ export default function FinalCelebration({ show }) {
 
   return (
     <div className="fixed inset-0 bg-black/70 backdrop-blur-xl z-[99999] flex flex-col items-center justify-center text-white">
+
       <motion.h1
         initial={{ scale: 0.5, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -25,6 +26,7 @@ export default function FinalCelebration({ show }) {
       >
         This moment is forever ours.
       </motion.p>
+
     </div>
   );
 }
